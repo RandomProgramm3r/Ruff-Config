@@ -45,3 +45,40 @@ This repository contains a set of configurations for linters and formatters that
   - String normalization disabled
   - Target Python version: py313
   - Excluded directory: `.venv`
+
+- **.gitignore**  
+  A comprehensive .gitignore file для Python.
+
+## Installation
+
+###  Step 1: Clone the Repository
+
+Clone the project repository using Git:
+
+```bash
+git clone https://github.com/RandomProgramm3r/Python-Linters-Configuration
+```
+
+###  Step 2: Create and activate a virtual environment
+
+Create a virtual environment using the `venv` command, which allows you to isolate project dependencies:
+
+```bash
+python3 -m venv venv #  Linux/MacOS
+python -m venv venv # Windows
+```
+
+Activate the virtual environment:
+
+```bash
+source venv/bin/activate #  Linux/MacOS
+source venv/Scripts/activate # Windows
+```
+
+###  Step 3: Installing Dependencies
+
+Install the dependencies (they include all **flake8** dependencies)
+
+```bash
+pip install -r requirements/linters.txt
+```
