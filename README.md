@@ -82,3 +82,14 @@ Install the dependencies (they include all **flake8** dependencies)
 ```bash
 pip install -r requirements/linters.txt
 ```
+
+## Usage
+
+```bash
+# Use to view PEP8 errors.
+flake8 . --count --show-source --statistics
+# Use to format code.
+black . --verbose
+# Use to format the order of imports.
+isort . --verbose
+```
