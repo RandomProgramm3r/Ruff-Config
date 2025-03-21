@@ -32,12 +32,17 @@ This repository contains a set of configurations for linters and formatters that
   - Excluded directories: `*/migrations/`, `venv/`, `.git`, `__pycache__`
   - Complexity limits: `max-complexity = 10`, `max-expression-complexity = 7`
   - The flake8-quotes plugin is set to use single quotes
+  - `known_first_party = myproject` — Specifies the project modules that should be considered "own" imports
+  *(replace `myapp` with the name of your Django applications)*
 
 - **.isort.cfg**  
   Configuration for sorting imports with the Black profile:
   - Excluded directories: `migrations`, `venv/`
   - Line length: 79 characters
   - Enforce sorting within sections
+  - `known_first_party = myproject` — Defines project modules for proper partitioning:
+  `STDLIB` → `THIRDPARTY` → `FIRSTPARTY` → `LOCALFOLDER`
+  *(replace `myapp` with the name of your Django applications)*
 
 - **pyproject.toml**  
   Configuration for Black:
