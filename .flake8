@@ -1,6 +1,6 @@
 [flake8]
 max-line-length = 79
-# app names:
+# django app names:
 application_import_names = myapp
 import-order-style = google
 exclude = 
