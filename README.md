@@ -1,58 +1,8 @@
-# Python Linters Configuration
+# Ruff Config
 
-This repository contains a set of configurations for linters and formatters that I use  in my Python projects. It includes configurations for **flake8** (with a range of plugins), **Black**, and **isort**. These linters helps ensure a consistent code style and improve code quality across projects.
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-## Repository Structure
-
-- **requirements/flake8-plugins.txt**  
-  List of dependencies for flake8 plugins:
-  - flake8-absolute-import==1.0.0.2
-  - flake8-bugbear==24.8.19
-  - flake8-clean-block==0.1.2
-  - flake8-commas==4.0.0
-  - flake8-eradicate==1.5.0
-  - flake8-expression-complexity==0.0.11
-  - flake8-implicit-str-concat==0.5.0
-  - flake8-print==5.0.0
-  - flake8-quotes==3.4.0
-  - flake8-return==1.2.0
-  - flake8-use-pathlib==0.3.0
-  - pep8-naming==0.14.1
-
-- **requirements/linters**  
-  Dependency file for the main tools:
-  - black==24.8.0
-  - flake8==7.1.1
-  - isort==5.13.2
-
-- **.flake8**  
-  flake8 configuration:
-  - Maximum line length: 79 characters
-  - Import order style: google
-  - Excluded directories: `*/migrations/`, `venv/`, `.git`, `__pycache__`
-  - Complexity limits: `max-complexity = 10`, `max-expression-complexity = 7`
-  - The flake8-quotes plugin is set to use single quotes
-  - `known_first_party = myproject` — Specifies the project modules that should be considered "own" imports
-  *(replace `myapp` with the name of your Django applications)*
-
-- **.isort.cfg**  
-  Configuration for sorting imports with the Black profile:
-  - Excluded directories: `migrations`, `venv/`
-  - Line length: 79 characters
-  - Enforce sorting within sections
-  - `known_first_party = myproject` — Defines project modules for proper partitioning:
-  `STDLIB` → `THIRDPARTY` → `FIRSTPARTY` → `LOCALFOLDER`
-  *(replace `myapp` with the name of your Django applications)*
-
-- **pyproject.toml**  
-  Configuration for Black:
-  - Maximum line length: 79 characters
-  - String normalization disabled
-  - Target Python version: py313
-  - Excluded directory: `.venv`
-
-- **.gitignore**  
-  A comprehensive .gitignore file для Python.
+This repository provides pre-configured configurations of **Ruff**, a fast tool for linting and formatting Python code. The ready-made **ruff.toml** file makes it easy to implement uniform standards of style and code quality in your projects.
 
 ## Installation
 
@@ -61,7 +11,7 @@ This repository contains a set of configurations for linters and formatters that
 Clone the project repository using Git:
 
 ```bash
-git clone https://github.com/RandomProgramm3r/Python-Linters-Configuration
+git clone https://github.com/RandomProgramm3r/Ruff-Config
 ```
 
 ###  Step 2: Create and activate a virtual environment
@@ -82,19 +32,6 @@ source venv/Scripts/activate # Windows
 
 ###  Step 3: Installing Dependencies
 
-Install the dependencies (they include all **flake8** dependencies)
-
 ```bash
-pip install -r requirements/linters.txt
-```
-
-## Usage
-
-```bash
-# Use to view PEP8 errors.
-flake8 . --count --show-source --statistics
-# Use to format code.
-black . --verbose
-# Use to format the order of imports.
-isort . --verbose
+pip install -r requirements.txt
 ```
