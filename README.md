@@ -35,3 +35,18 @@ source venv/Scripts/activate # Windows
 ```bash
 pip install -r requirements.txt
 ```
+
+## Using Ruff
+
+To integrate Ruff into your workflow, use the following commands:
+
+```bash
+# Run linting checks on all files
+ruff check .
+
+# Automatically fix all fixable lint issues
+ruff check . --fix
+
+# Format code according to Ruff’s rules
+ruff format .
+```
