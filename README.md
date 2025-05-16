@@ -50,3 +50,14 @@ ruff check . --fix
 # Format code according to Ruff’s rules
 ruff format .
 ```
+
+## CI with GitHub Actions
+
+This repository includes a GitHub Actions workflow (`.github/workflows/ruff.yml`) that on every push or pull request to `main` will:
+
+- Check out the code
+- Set up Python 3.13
+- Run Ruff via the official action
+- Verify formatting with `ruff format --check`
+
+To customize, edit `.github/workflows/ruff.yml` or adjust your `ruff.toml`.
